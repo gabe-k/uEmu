@@ -522,6 +522,7 @@ class ControlView(PluginForm):
         self.owner.emu_run()
 
     def OnEmuStep(self, code=0):
+        self.owner.jump_to_pc()
         self.owner.emu_step()
 
     def OnEmuStop(self, code=0):
